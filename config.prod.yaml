@@ -48,6 +48,18 @@ services:
       #   - domain1.com
       #   - domain2.org
       user_agent: cxserver
+      # Mediawiki host name. Example {lang}.wikisource.org which get expanded internaly to
+      # es.wikisource.org in a spanish language context.
+      # Do not prefix with http or https://
+      # mw_host: '{lang}.wikipedia.org'
+      mwapi_req:
+        body: "{{request.body}}"
+        query: "{{ default(request.query, {}) }}"
+        headers:
+          host: "{{request.params.domain}}"
+          user-agent: "{{user-agent}}"
+        method: post
+        uri: "https://{{domain}}/w/api.php"
       restbase_req:
         method: '{{request.method}}'
         uri: https://{{domain}}/api/rest_v1/{+path}
@@ -58,14 +70,21 @@ services:
         secret: ''
         algorithms:
           - HS256
+      languages: config/languages.yaml
       mt:
-        # Apertium web API URL
-        apertium:
+        Apertium:
           api: http://apertium.wmflabs.org
-        yandex:
+          # For packaging reasons use separate configuration
+          languages: config/Apertium.wikimedia.yaml
+        Yandex:
           api: https://translate.yandex.net
           key: null
-        youdao:
+          languages: config/Yandex.yaml
+        Youdao:
           api: https://fanyi.youdao.com/paidapi/fanyiapi
           key: null
-      registry: ./registry.wikimedia.yaml
+          languages: config/Youdao.yaml
+        defaults: config/mt-defaults.wikimedia.yaml
+      dictionary:
+        JsonDict:
+          languages: config/JsonDict.yaml

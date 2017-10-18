@@ -3,10 +3,12 @@
 	"an": "arg",
 	"ar": "ara",
 	"ast": "ast",
+	"be": "bel",
 	"bg": "bul",
 	"br": "bre",
 	"bs": "hbs_BS",
 	"ca": "cat",
+	"crh": "crh",
 	"cy": "cym",
 	"da": "dan",
 	"en": "eng",
@@ -32,6 +34,7 @@
 	"oc": "oci",
 	"pt": "por",
 	"ro": "ron",
+	"ru": "rus",
 	"sc": "srd",
 	"se": "sme",
 	"sh": "hbs",
@@ -39,6 +42,7 @@
 	"sl": "slv",
 	"sr": "hbs_SR",
 	"sv": "swe",
+	"tr": "tur",
 	"tt": "tat",
 	"ur": "urd"
 }
