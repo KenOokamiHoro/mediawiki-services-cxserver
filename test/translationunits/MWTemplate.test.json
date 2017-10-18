@@ -1,0 +1,320 @@
+[
+	{
+		"desc": "Template with no equivalents",
+		"from": "fi",
+		"to": "ajt",
+		"source": {
+			"attributes": {
+				"id": "mwPL",
+				"typeof": "mw:Transclusion",
+				"data-mw": {
+					"parts": [
+						{
+							"template": {
+								"target": {
+									"wt": "Parasym",
+									"href": "./Malline:Parasym"
+								},
+								"params": {},
+								"i": 0
+							}
+						}
+					]
+				}
+			}
+		},
+		"result": {
+			"attributes": {
+				"data-cx": [
+					{
+						"adapted": false
+					}
+				],
+				"data-mw": {
+					"parts": [
+						{
+							"template": {
+								"target": {
+									"wt": "Parasym",
+									"href": "./Malline:Parasym"
+								},
+								"params": {},
+								"i": 0
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	{
+		"desc": "Babel template",
+		"from": "fi",
+		"to": "sl",
+		"source": {
+			"attributes": {
+				"id": "mwSQ",
+				"typeof": "mw:Transclusion",
+				"data-mw": {
+					"parts": [
+						{
+							"template": {
+								"target": {
+									"wt": "Babel",
+									"href": "./Malline:Babel"
+								},
+								"params": {
+									"1": {
+										"wt": "fi"
+									}
+								},
+								"i": 0
+							}
+						}
+					]
+				}
+			}
+		},
+		"result": {
+			"attributes": {
+				"data-cx": [
+					{
+						"adapted": true
+					}
+				],
+				"data-mw": {
+					"parts": [
+						{
+							"template": {
+								"target": {
+									"wt": "Babilon",
+									"href": "./Predloga:Babilon"
+								},
+								"params": {
+									"1": {
+										"wt": "fi"
+									}
+								},
+								"i": 0
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	{
+		"desc": "Cite web template",
+		"from": "en",
+		"to": "fr",
+		"source": {
+			"attributes": {
+				"id": "mwSQ",
+				"typeof": "mw:Transclusion",
+				"data-mw": {
+					"parts": [{
+						"template": {
+							"target": {
+								"wt": "cite web",
+								"href": "./Template:Cite_web"
+							},
+							"params": {
+								"url": {
+									"wt": "http://www.example.org/ "
+								},
+								"title": {
+									"wt": "My Favorite Things, Part II "
+								},
+								"last": {
+									"wt": "Doe "
+								},
+								"first": {
+									"wt": "John "
+								},
+								"publisher": {
+									"wt": " Open Publishing "
+								},
+								"date": {
+									"wt": "30 April 2005 "
+								},
+								"website": {
+									"wt": "Encyclopedia of Things "
+								},
+								"access-date ": {
+									"wt": "26 June 2016 "
+								}
+							},
+							"i": 0
+						}
+					   }]
+				}
+			}
+		},
+		"result": {
+			"attributes": {
+				"data-cx": [
+					{
+						"adapted": true
+					}
+				],
+				"data-mw": {
+					"parts": [ {
+						"template": {
+							"target": {
+								"wt": "Lien web",
+								"href": "./Modèle:Lien web"
+							},
+							"params": {
+								"url": {
+									"wt": "http://www.example.org/ "
+								},
+								"titre": {
+									"wt": "My Favorite Things, Part II "
+								},
+								"auteur1": {
+									"wt": "Doe "
+								},
+								"prénom1": {
+									"wt": "John "
+								},
+								"éditeur": {
+									"wt": " Open Publishing "
+								},
+								"date": {
+									"wt": "30 April 2005 "
+								},
+								"série": {
+									"wt": "Encyclopedia of Things "
+								},
+								"consulté le": {
+									"wt": "26 June 2016 "
+								}
+							},
+							"i": 0
+						}
+					} ]
+				}
+			}
+		}
+	},
+	{
+		"desc": "Multi-part template for columns",
+		"from": "en",
+		"to": "sv",
+		"source": {
+			"attributes": {
+				"id": "mwZw",
+				"typeof": "mw:Transclusion",
+				"data-mw": {
+					"parts": [
+						{
+							"template": {
+								"target": {
+									"wt": "col-begin",
+									"href": "./Template:Col-begin"
+								},
+								"params": {},
+								"i": 0
+							}
+						},
+						{
+							"template": {
+								"target": {
+									"wt": "col-break",
+									"href": "./Template:Col-break"
+								},
+								"params": {},
+								"i": 1
+							}
+						},
+						"\n* [[Arcosanti]]\n* [[Autonomous building]]\n* [[Bionic architecture]]\n* [[Dubai City Tower]]\n* [[Earthship]]\n* [[Megastructure]]\n* [[Proposed tall buildings and structures]]\n",
+						{
+							"template": {
+								"target": {
+									"wt": "col-break",
+									"href": "./Template:Col-break"
+								},
+								"params": {
+									"gap": {
+										"wt": "4em"
+									}
+								},
+								"i": 2
+							}
+						},
+						"\n* [[Shimizu Mega-City Pyramid]]\n* [[Underground city]]\n* [[Urban ecology]]\n* [[Vertical farming]]\n",
+						{
+							"template": {
+								"target": {
+									"wt": "col-end",
+									"href": "./Template:Col-end"
+								},
+								"params": {},
+								"i": 3
+							}
+						}
+					]
+				}
+			}
+		},
+		"result": {
+			"attributes": {
+				"data-cx": [
+					{
+						"adapted": true
+					}
+				],
+				"data-mw": {
+					"parts": [
+						{
+							"template": {
+								"target": {
+									"wt": "Col-begin",
+									"href": "./Mall:Col-begin"
+								},
+								"params": {},
+								"i": 0
+							}
+						},
+						{
+							"template": {
+								"target": {
+									"wt": "Col-break",
+									"href": "./Mall:Col-break"
+								},
+								"params": {},
+								"i": 1
+							}
+						},
+						"\n* [[Arcosanti]]\n* [[Autonomous building]]\n* [[Bionic architecture]]\n* [[Dubai City Tower]]\n* [[Earthship]]\n* [[Megastructure]]\n* [[Proposed tall buildings and structures]]\n",
+						{
+							"template": {
+								"target": {
+									"wt": "Col-break",
+									"href": "./Mall:Col-break"
+								},
+								"params": {
+									"gap": {
+										"wt": "4em"
+									}
+								},
+								"i": 2
+							}
+						},
+						"\n* [[Shimizu Mega-City Pyramid]]\n* [[Underground city]]\n* [[Urban ecology]]\n* [[Vertical farming]]\n",
+						{
+							"template": {
+								"target": {
+									"wt": "Col-end",
+									"href": "./Mall:Col-end"
+								},
+								"params": {},
+								"i": 3
+							}
+						}
+					]
+				}
+			}
+		}
+	}
+]

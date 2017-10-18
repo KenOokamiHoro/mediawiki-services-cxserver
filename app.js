@@ -7,9 +7,7 @@ var http = require( 'http' ),
 	bodyParser = require( 'body-parser' ),
 	fs = BBPromise.promisifyAll( require( 'fs' ) ),
 	sUtil = require( './lib/util' ),
-	apiUtil = require( './lib/api-util' ),
 	packageInfo = require( './package.json' ),
-	path = require( 'path' ),
 	yaml = require( 'js-yaml' );
 
 require( 'core-js/shim' );
@@ -36,7 +34,7 @@ function initApp( options ) {
 		app.conf.interface = '0.0.0.0';
 	}
 	if ( app.conf.compression_level === undefined ) {
-		/* eslint camelcase:off */
+		// eslint-disable-next-line camelcase
 		app.conf.compression_level = 3;
 	}
 	if ( app.conf.cors === undefined ) {
@@ -61,9 +59,6 @@ function initApp( options ) {
 		}
 	}
 
-	// set up the request templates for the APIs
-	apiUtil.setupApiTemplates( app );
-
 	// set up the spec
 	if ( !app.conf.spec ) {
 		app.conf.spec = __dirname + '/spec.yaml';
@@ -78,24 +73,6 @@ function initApp( options ) {
 		}
 	}
 
-	// set up the registry
-	if ( !app.conf.registry ) {
-		app.conf.registry = __dirname + '/registry.yaml';
-	} else if ( typeof app.conf.registry === 'string' ) {
-		if ( !path.isAbsolute( app.conf.registry ) ) {
-			app.conf.registry = __dirname + '/' + app.conf.registry;
-		}
-	}
-
-	if ( app.conf.registry.constructor !== Object ) {
-		try {
-			app.logger.log( 'info/registry', 'Reading registry from: ' + app.conf.registry );
-			app.conf.registry = yaml.safeLoad( fs.readFileSync( app.conf.registry ) );
-		} catch ( e ) {
-			app.logger.log( 'warn/registry', 'Could not load the registry: ' + e );
-			app.conf.registry = {};
-		}
-	}
 	if ( !app.conf.spec.swagger ) {
 		app.conf.spec.swagger = '2.0';
 	}

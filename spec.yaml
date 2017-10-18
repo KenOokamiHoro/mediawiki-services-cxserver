@@ -179,9 +179,10 @@ paths:
           required: false
           enum:
            - Apertium
+           - Matxin
         - name: html
           in: formData
-          description: The HTML content to translate
+          description: The HTML or plaintext content to translate
           type: string
           required: true
           x-textarea: true
@@ -350,20 +351,6 @@ paths:
               from: en
               to: es
               tool: mt
-          response:
-            status: 200
-            headers:
-              content-type: application/json
-  /v1/languagepairs:
-    get:
-      tags:
-        - Languages
-        - Service information
-      description: Lists the language pairs supported by the server
-      produces:
-        - application/json
-      x-amples:
-        - title: Get all the language pairs
           response:
             status: 200
             headers:
